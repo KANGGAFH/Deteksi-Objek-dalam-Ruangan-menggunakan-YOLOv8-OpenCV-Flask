@@ -1,4 +1,4 @@
-# 🧠 Deteksi Orang dalam Ruangan menggunakan YOLOv8, OpenCV & Flask
+# 🧠 Deteksi Objek dalam Ruangan menggunakan YOLOv8, OpenCV & Flask
 
 Aplikasi web sederhana yang memungkinkan deteksi keberadaan **orang** dalam gambar, video, dan kamera real-time menggunakan **YOLOv8**, **OpenCV**, dan **Flask**.
 
