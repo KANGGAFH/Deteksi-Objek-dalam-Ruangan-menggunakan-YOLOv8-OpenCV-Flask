@@ -1,0 +1,20 @@
+<!-- templates/index.html -->
+{% extends "base.html" %}
+{% block content %}
+<div class="text-center my-5">
+  <h1 class="mb-4">Deteksi Orang dalam Gambar, Video, atau Kamera</h1>
+
+  <div class="card shadow p-4 mx-auto" style="max-width: 500px;">
+    <form method="POST" action="{{ url_for('upload_file') }}" enctype="multipart/form-data">
+      <div class="mb-3 text-start">
+        <label class="form-label">Upload Gambar atau Video</label>
+        <input class="form-control" type="file" name="file" accept="image/*,video/*" required>
+      </div>
+      <div class="d-grid gap-2">
+        <button class="btn btn-primary" type="submit">Deteksi Sekarang</button>
+        <a href="{{ url_for('kamera') }}" class="btn btn-outline-success">Deteksi Lewat Kamera</a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

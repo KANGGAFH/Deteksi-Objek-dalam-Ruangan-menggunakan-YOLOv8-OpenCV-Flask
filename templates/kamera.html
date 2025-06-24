@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container text-center mt-5">
+  <h2>Deteksi Orang via Kamera</h2>
+  <img src="{{ url_for('video_feed') }}" width="720" class="img-fluid mt-4" style="border: 2px solid #333;">
+  <br><br>
+  <a href="{{ url_for('stop_kamera') }}" class="btn btn-secondary">Kembali</a>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.card {
+  border-radius: 16px;
+}
+
+.btn {
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+img, video {
+  border-radius: 12px;
+  border: 1px solid #ccc;
+}

@@ -1,0 +1,21 @@
+<!-- templates/result.html -->
+{% extends "base.html" %}
+{% block content %}
+<div class="text-center mt-5">
+  <h2>Hasil Deteksi</h2>
+  <p class="mb-4"><strong>Jumlah orang terdeteksi:</strong> {{ jumlah }}</p>
+
+  <div class="card p-3 shadow-sm mx-auto" style="max-width: 720px;">
+    {% if hasil.endswith('.mp4') %}
+      <video width="100%" controls>
+        <source src="{{ url_for('uploaded_file', filename=hasil) }}" type="video/mp4">
+        Browser tidak mendukung video.
+      </video>
+    {% else %}
+      <img src="{{ url_for('uploaded_file', filename=hasil) }}" class="img-fluid" alt="Hasil Deteksi">
+    {% endif %}
+  </div>
+
+  <a href="{{ url_for('index') }}" class="btn btn-secondary mt-4">Kembali</a>
+</div>
+{% endblock %}
